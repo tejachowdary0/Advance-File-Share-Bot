@@ -41,12 +41,9 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('💝 Subscribe YouTube Channel 💗', url=f'http://youtube.com/@Tech_VJ')
-            ],[
-            InlineKeyboardButton('♻️ Update Channel ♻️', url=f'https://t.me/VJ_Botz')
-            ],[
-            InlineKeyboardButton('ℹ️ Owner', url=f't.me/vjbots_bot'),
-            InlineKeyboardButton('😊 About', callback_data='about')
+                    InlineKeyboardButton('🔶 GROUP 1🔶', url="https://t.me/request_bots"),
+                    InlineKeyboardButton('🔶 GROUP 2🔶', url='https://t.me/Request_robots')
+       
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -63,13 +60,9 @@ async def start(client, message):
             return
 
         buttons = [[
-            InlineKeyboardButton('💝 Subscribe YouTube Channel 💗', url=f'http://youtube.com/@Tech_VJ')
-            ],[
-            InlineKeyboardButton('♻️ Update Channel ♻️', url=f'https://t.me/VJ_Botz')
-            ],[
-            InlineKeyboardButton('ℹ️ Owner', url=f't.me/vjbots_bot'),
-            InlineKeyboardButton('😊 About', callback_data='about')
-        ]]
+                    InlineKeyboardButton('🔶 GROUP 1🔶', url="https://t.me/request_bots"),
+                    InlineKeyboardButton('🔶 GROUP 2🔶', url='https://t.me/Request_robots')
+                ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
