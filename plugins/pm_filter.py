@@ -412,14 +412,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "pages":
         await query.answer()
     elif query.data == "start":
-        buttons = [[
-            InlineKeyboardButton('💝 Subscribe YouTube Channel 💗', url=f'http://youtube.com/@Tech_VJ')
-            ],[
-            InlineKeyboardButton('♻️ Update Channel ♻️', url=f'https://t.me/VJ_Botz')
-            ],[
-            InlineKeyboardButton('ℹ️ Owner', url=f't.me/vjbots_bot'),
-            InlineKeyboardButton('😊 About', callback_data='about')
-        ]]
+        buttons =[[
+                    InlineKeyboardButton('🔶 GROUP 1🔶', url="https://t.me/request_bots"),
+                    InlineKeyboardButton('🔶 GROUP 2🔶', url='https://t.me/Request_robots')
+                ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
